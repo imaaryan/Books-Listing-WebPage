@@ -122,6 +122,7 @@ body {
   background-color: var(--card-bg);
   transition: all 0.3s ease;
   min-width: 120px;
+  color: var(--secondary-color);
 }
 
 .btn:hover {
@@ -254,6 +255,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: var(--secondary-color);
 }
 
 .pagination button:hover {
