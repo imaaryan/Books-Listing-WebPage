@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Find and discover books with FindMyBooks">
+    <meta
+      name="description"
+      content="Find and discover books with FindMyBooks"
+    />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/icon.png" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -14,7 +18,11 @@
   <body>
     <header class="header">
       <h1 id="logo">FindMy<span style="color: #d14613">Books</span></h1>
-      <a id="github" href="https://github.com/imaaryan/Books-Listing-WebPage" target="_blank" rel="noopener noreferrer"
+      <a
+        id="github"
+        href="https://github.com/imaaryan/Books-Listing-WebPage"
+        target="_blank"
+        rel="noopener noreferrer"
         ><i class="ri-github-fill"></i> GitHub</a
       >
     </header>
@@ -32,10 +40,14 @@
             <i class="ri-search-line icon"></i>
           </div>
           <div class="btn-container">
-            <button id="sort" class="btn">
+            <div id="sort-container">
               <i class="ri-sort-desc"></i>
-              Sort By
-            </button>
+              <select class="btn" name="Sort" id="sort">
+                <option value="">Sort by</option>
+                <option value="byName">Sort by Name</option>
+                <option value="byName">Sort by Date</option>
+              </select>
+            </div>
             <button id="view-type" class="btn">
               <i class="ri-layout-grid-line"></i>
               List/Grid
@@ -45,88 +57,7 @@
       </section>
 
       <section class="book-results">
-        <div class="card-container grid">
-          <div class="card">
-            <div class="image-container">
-              <div class="image">
-                <img
-                  src="https://books.google.com/books/content?id=KA9QDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-                  alt="Practices of an Agile Developer book cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div class="about">
-              <h2 class="title">Practices of an Agile Developer</h2>
-              <div class="book-meta">
-                <div class="Author">Author: Venkat Subramaniam, Andy Hunt</div>
-                <div class="Publisher">Publisher: Pragmatic Bookshelf</div>
-              </div>
-              <div class="publish-date">Published on: 2006-04-04</div>
-              <button class="read-more">Read More</button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image-container">
-              <div class="image">
-                <img
-                  src="https://books.google.com/books/content?id=KA9QDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-                  alt="Practices of an Agile Developer book cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div class="about">
-              <h2 class="title">Practices of an Agile Developer</h2>
-              <div class="book-meta">
-                <div class="Author">Author: Venkat Subramaniam, Andy Hunt</div>
-                <div class="Publisher">Publisher: Pragmatic Bookshelf</div>
-              </div>
-              <div class="publish-date">Published on: 2006-04-04</div>
-              <button class="read-more">Read More</button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image-container">
-              <div class="image">
-                <img
-                  src="https://books.google.com/books/content?id=KA9QDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-                  alt="Practices of an Agile Developer book cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div class="about">
-              <h2 class="title">Practices of an Agile Developer</h2>
-              <div class="book-meta">
-                <div class="Author">Author: Venkat Subramaniam, Andy Hunt</div>
-                <div class="Publisher">Publisher: Pragmatic Bookshelf</div>
-              </div>
-              <div class="publish-date">Published on: 2006-04-04</div>
-              <button class="read-more">Read More</button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image-container">
-              <div class="image">
-                <img
-                  src="https://books.google.com/books/content?id=KA9QDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-                  alt="Practices of an Agile Developer book cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div class="about">
-              <h2 class="title">Practices of an Agile Developer</h2>
-              <div class="book-meta">
-                <div class="Author">Author: Venkat Subramaniam, Andy Hunt</div>
-                <div class="Publisher">Publisher: Pragmatic Bookshelf</div>
-              </div>
-              <div class="publish-date">Published on: 2006-04-04</div>
-              <button class="read-more">Read More</button>
-            </div>
-          </div>
-        </div>
+        <div class="card-container grid"></div>
 
         <div class="pagination">
           <button class="prev" aria-label="Previous page"><</button>
@@ -144,5 +75,7 @@
       <p>&copy; 2025 FindMyBooks. All rights reserved.</p>
       <p>Designed and Developed with ❤️ By Aaryan Pandey</p>
     </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>
