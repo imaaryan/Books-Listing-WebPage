@@ -182,6 +182,7 @@ body {
 
 .card-container a {
   all: unset;
+  display: contents;
 }
 
 .image-container {
@@ -290,9 +291,9 @@ body {
     width: 100%;
   }
 
-#sort-container{
-width: 100%;
-}
+  #sort-container {
+    width: 100%;
+  }
 
   #view-type {
     display: none;
