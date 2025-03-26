@@ -1,6 +1,9 @@
 # 📚 FindMyBooks - Discover Your Next Read
 
-![FindMyBooks Video](assets/images/demo.mp4)
+<video width="100%" controls>
+  <source src="assets/videos/demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## 🌟 Overview
 **FindMyBooks** is a simple and intuitive web application that allows users to discover and explore books. It fetches book data from an API and provides features like search, sorting, and multiple view options.
