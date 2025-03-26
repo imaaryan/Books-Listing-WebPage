@@ -92,8 +92,67 @@ function changeViewType() {
   });
 }
 
+// funtion to trigger sort btn
+function setupSorting() {
+  const sortSelect = document.getElementById("sort");
+
+  sortSelect.addEventListener("change", () => {
+    const sortBy = sortSelect.value;
+
+    if (sortBy === "byNameASC") {
+      sortBooks("titleASC");
+    } else if (sortBy === "byNameDES") {
+      sortBooks("titleDES");
+    } else if (sortBy === "byDateNew") {
+      sortBooks("dateNew");
+    } else if (sortBy === "byDateOld") {
+      sortBooks("dateOld");
+    }
+  });
+}
+
+// function to sort books according to title and date
+function sortBooks(by = "title") {
+  if (by === "titleASC") {
+    booksData.sort((a, b) => a.title.localeCompare(b.title));
+  } else if (by === "titleDES") {
+    booksData.sort((a, b) => b.title.localeCompare(a.title));
+  } else if (by === "dateNew") {
+    booksData.sort((a, b) => {
+      const dateA =
+        a.publishedDate === "Info not available"
+          ? new Date(0)
+          : new Date(a.publishedDate);
+      const dateB =
+        b.publishedDate === "Info not available"
+          ? new Date(0)
+          : new Date(b.publishedDate);
+      return dateB - dateA;
+    });
+  } else if (by === "dateOld") {
+    booksData.sort((a, b) => {
+      const dateA =
+        a.publishedDate === "Info not available"
+          ? new Date(0)
+          : new Date(a.publishedDate);
+      const dateB =
+        b.publishedDate === "Info not available"
+          ? new Date(0)
+          : new Date(b.publishedDate);
+      return dateA - dateB;
+    });
+  }
+
+  //redenring the book cards
+  const cardContainer = document.querySelector(".card-container");
+  cardContainer.innerHTML = "";
+  booksData.forEach((book) => {
+    cardContainer.appendChild(book.bookCard.parentElement);
+  });
+}
 
 //executing functions
 displayBooks();
 searchBooks();
 changeViewType();
+setupSorting();
