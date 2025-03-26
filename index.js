@@ -30,11 +30,18 @@ async function displayBooks() {
     const publisher = volumeInfo.publisher ?? "Info not available";
     const publishedDate = volumeInfo.publishedDate ?? "Info not available";
     const title = volumeInfo.title ?? "Untitled";
+    const link = volumeInfo.infoLink ?? "/#";
     const imageLink =
       volumeInfo.imageLinks?.thumbnail ?? "/assets/images/noCover.webp";
 
+    let linkTag = document.createElement("a");
+    linkTag.href = link;
+    linkTag.target = "_blank";
+
     let bookCard = document.createElement("div");
     bookCard.classList.add("card");
+
+    linkTag.appendChild(bookCard);
     bookCard.innerHTML = ` 
       <div class="image-container">
         <div class="image">
@@ -48,13 +55,13 @@ async function displayBooks() {
       <div class="about">
         <h2 class="title">${title}</h2>
         <div class="book-meta">
-          <div class="Author">Author: ${authors}</div>
-          <div class="Publisher">Publisher: ${publisher}</div>
+          <div class="Author"><strong>Author:</strong> ${authors}</div>
+          <div class="Publisher"><strong>Publisher:</strong> ${publisher}</div>
         </div>
-        <div class="publish-date">Published on: ${publishedDate}</div>
+        <div class="publish-date"><strong>Published on:</strong> ${publishedDate}</div>
       </div>
     `;
-    cardContainer.appendChild(bookCard);
+    cardContainer.appendChild(linkTag);
 
     return { title, authors, publisher, publishedDate, bookCard };
   });
