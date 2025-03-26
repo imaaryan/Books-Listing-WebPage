@@ -232,57 +232,6 @@ body {
   margin-bottom: 10px;
 }
 
-.read-more {
-  align-self: flex-start;
-  padding: 0.5rem 1.5rem;
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-  margin-top: auto;
-}
-
-.read-more:hover {
-  background-color: #b3380f;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 3rem;
-}
-
-.pagination button {
-  padding: 0.5rem 1rem;
-  border: 1px solid #ddd;
-  background-color: var(--card-bg);
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: var(--secondary-color);
-}
-
-.pagination button:hover {
-  background-color: #f5f5f5;
-}
-
-.pagination .active {
-  background-color: var(--primary-color);
-  color: white;
-  border-color: var(--primary-color);
-}
-.pagination .active:hover {
-  background-color: var(--primary-color);
-  color: white;
-  border-color: var(--primary-color);
-}
-
 .footer {
   display: flex;
   justify-content: space-between;
