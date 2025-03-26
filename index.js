@@ -30,9 +30,9 @@ async function displayBooks() {
     const publisher = volumeInfo.publisher ?? "Info not available";
     const publishedDate = volumeInfo.publishedDate ?? "Info not available";
     const title = volumeInfo.title ?? "Untitled";
-    const link = volumeInfo.infoLink ?? "/#";
+    const link = volumeInfo.infoLink ?? "";
     const imageLink =
-      volumeInfo.imageLinks?.thumbnail ?? "/assets/images/noCover.webp";
+      volumeInfo.imageLinks?.thumbnail ?? "./assets/images/noCover.webp";
 
     let linkTag = document.createElement("a");
     linkTag.href = link;
@@ -82,6 +82,18 @@ function searchBooks() {
   });
 }
 
+//function to changeViewType
+function changeViewType() {
+  const viewBtn = document.getElementById("view-type");
+  const cardContainer = document.querySelector(".card-container");
+
+  viewBtn.addEventListener("click", () => {
+    cardContainer.classList.toggle("grid");
+  });
+}
+
+
 //executing functions
 displayBooks();
 searchBooks();
+changeViewType();

@@ -153,6 +153,12 @@ body {
 }
 
 .card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 1.5rem;
@@ -332,7 +338,15 @@ body {
   }
 
   .btn {
-    width: 49%;
+    width: 100%;
+  }
+
+#sort-container{
+width: 100%;
+}
+
+  #view-type {
+    display: none;
   }
 
   .card-container {
