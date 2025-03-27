@@ -27,11 +27,6 @@
 
 ---
 
-## 🎥 Demo
-![GIF of FindMyBooks in action](assets/images/demo.gif)
-
----
-
 ## 📂 Project Structure
 ```
 📦 Books-Listing-WebPage
